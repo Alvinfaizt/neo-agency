@@ -7,10 +7,49 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* [TAG: VISUAL_REFINEMENT_HERO] Dot-matrix rigid grid pattern background */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+        circle,
+        var(--dark-black) 1.5px,
+        transparent 1.5px
+    );
+    background-size: 28px 28px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* [TAG: VISUAL_REFINEMENT_HERO] Geometric accent shape - top-right corner */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 160px;
+    height: 160px;
+    border: var(--neo-stroke);
+    background-color: var(--neon-green);
+    transform: rotate(15deg);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-container {
     max-width: 800px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
@@ -20,12 +59,16 @@
     letter-spacing: -2px;
 }
 
+/* [TAG: VISUAL_REFINEMENT_HERO] Structurally absolute highlight with rigid badge effect */
 .hero-title .highlight {
     background-color: var(--neon-green);
-    padding: 0 10px;
+    padding: 2px 12px;
     border: var(--neo-stroke);
     display: inline-block;
-    transform: rotate(-2px);
+    transform: rotate(-2deg);
+    position: relative;
+    box-shadow: 4px 4px 0px var(--dark-black);
+    white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -40,4 +83,17 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+/* [TAG: VISUAL_REFINEMENT_HERO] Responsive hero section for mobile viewports */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
 }

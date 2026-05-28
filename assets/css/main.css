@@ -49,3 +49,55 @@ body {
     transform: translate(6px, 6px);
     box-shadow: var(--neo-shadow-active);
 }
+
+/* [TAG: TYPOGRAPHY_SCALING] Fluid typography hierarchy using clamp() for responsive scaling */
+/* Prevents layout overflow on mobile while keeping bold impact on desktop */
+
+h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2vw + 0.5rem, 1.8rem);
+}
+
+h4 {
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.4rem);
+}
+
+h5 {
+    font-size: clamp(0.9rem, 1vw + 0.4rem, 1.2rem);
+}
+
+h6 {
+    font-size: clamp(0.8rem, 0.8vw + 0.4rem, 1rem);
+}
+
+/* [TAG: TYPOGRAPHY_SCALING] Hero title - largest display heading */
+.hero-title {
+    font-size: clamp(2rem, 6vw + 0.5rem, 3.5rem);
+}
+
+/* [TAG: TYPOGRAPHY_SCALING] Section titles - mid-level display */
+.section-title {
+    font-size: clamp(1.6rem, 4vw + 0.5rem, 2.5rem);
+}
+
+/* [TAG: TYPOGRAPHY_SCALING] Contact info heading */
+.info-heading {
+    font-size: clamp(1.6rem, 4vw + 0.5rem, 2.5rem);
+}
+
+/* [TAG: TYPOGRAPHY_SCALING] Bento box headings */
+.box-heading {
+    font-size: clamp(1.2rem, 2.5vw + 0.4rem, 1.8rem);
+}
+
+/* [TAG: TYPOGRAPHY_SCALING] Large statistic number */
+.stat-number {
+    font-size: clamp(2.5rem, 8vw + 0.5rem, 4.5rem);
+}

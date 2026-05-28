@@ -23,6 +23,21 @@
     box-shadow: var(--neo-shadow);
     padding: 30px;
     position: relative;
+    /* [TAG: INTERACTIVE_CARDS_SERVICES] Strict neubrutalism mechanical transition */
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    cursor: pointer;
+}
+
+/* [TAG: INTERACTIVE_CARDS_SERVICES] Physical elevation hover - shift up-left with deeper hard shadow */
+.neo-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #000000;
+}
+
+/* [TAG: INTERACTIVE_CARDS_SERVICES] Pressed state returns card to flat rest */
+.neo-card:active {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0px #000000;
 }
 
 .card-badge {

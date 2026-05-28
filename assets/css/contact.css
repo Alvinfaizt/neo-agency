@@ -93,13 +93,20 @@
     border-color: var(--dark-black);
 }
 
-/* Komponen Pesan Error Validasi */
+/* [TAG: CONTACT_FORM_FEEDBACK] Mini warning tag styled error messages */
 .error-message {
-    color: #FF0033; /* Merah pekat kontras */
-    font-size: 0.8rem;
+    color: #CC0022;
+    font-size: 0.75rem;
     font-weight: bold;
-    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-top: 6px;
+    padding: 6px 12px;
+    background-color: #FFE0E0;
+    border: 2px solid #000000;
+    border-radius: 0px;
     display: none; /* Disembunyikan secara default */
+    width: fit-content;
 }
 
 /* Helper Class untuk Tombol */
