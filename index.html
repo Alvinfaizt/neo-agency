@@ -112,6 +112,63 @@
         </div>
     </section>
 
+    <!-- Masukkan ini di dalam tag <head> di bawah CSS komponen lainnya -->
+    <!-- [TAG: MODULAR_CONTACT_CSS] -->
+    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- ======================================================================= -->
+
+    <!-- Masukkan ini di dalam tag <body_> sebelum tag <script> -->
+    <!-- [TAG: CONTACT_SECTION] Formulir Kontak Interaktif dengan Validasi Vanilla JS -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="section-title">CONNECT WITH US</h2>
+
+            <div class="contact-wrapper">
+                <!-- Sisi Informasi Kiri -->
+                <div class="contact-info">
+                    <h3 class="info-heading">LET'S START SOMETHING BOLD.</h3>
+                    <p class="info-text">Punya ide gila atau proyek menantang? Jangan ragu untuk mendiskusikannya dengan
+                        tim kami. Kami siap merealisasikannya tanpa framework, murni performa tinggi.</p>
+                    <div class="info-badge">EMAIL: HELLO@NEOAGENCY.XYZ</div>
+                </div>
+
+                <!-- Sisi Formulir Kanan -->
+                <div class="contact-box-form">
+                    <form id="neo-contact-form" novalidate>
+
+                        <!-- Input Nama -->
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">YOUR NAME</label>
+                            <input type="text" id="contact-name" class="form-input" placeholder="John Doe" required>
+                            <span id="error-name" class="error-message">Nama wajib diisi dengan benar!</span>
+                        </div>
+
+                        <!-- Input Email -->
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">EMAIL ADDRESS</label>
+                            <input type="email" id="contact-email" class="form-input" placeholder="john@example.com"
+                                required>
+                            <span id="error-email" class="error-message">Format email tidak valid!</span>
+                        </div>
+
+                        <!-- Input Pesan -->
+                        <div class="form-group">
+                            <label for="contact-message" class="form-label">YOUR MESSAGE</label>
+                            <textarea id="contact-message" class="form-input form-textarea"
+                                placeholder="Tulis rencana proyek besar Anda di sini..." required></textarea>
+                            <span id="error-message" class="error-message">Pesan tidak boleh kosong!</span>
+                        </div>
+
+                        <!-- Tombol Submit Kirim -->
+                        <button type="submit" id="btn-submit-contact" class="neo-btn btn-neon btn-full">SEND MESSAGE
+                            ↗</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- [TAG: JAVASCRIPT_LINKS] Script modular menggunakan defer agar load berurutan -->
     <script src="assets/js/interaction.js" defer></script>
     <script src="assets/js/main.js" defer></script>
