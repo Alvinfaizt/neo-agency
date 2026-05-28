@@ -1,0 +1,49 @@
+/* [TAG: SERVICES_STYLES] Pengaturan layout grid untuk halaman Layanan */
+.services {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.neo-card {
+    background-color: var(--pure-white);
+    border: var(--neo-stroke);
+    box-shadow: var(--neo-shadow);
+    padding: 30px;
+    position: relative;
+}
+
+.card-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border: var(--neo-stroke);
+    margin-bottom: 20px;
+}
+
+.badge-neon { background-color: var(--neon-green); }
+.badge-white { background-color: var(--pure-white); }
+
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #444;
+}

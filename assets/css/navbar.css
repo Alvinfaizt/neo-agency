@@ -1,0 +1,41 @@
+/* [TAG: NAVBAR_STYLES] IMMUNE - Pengaturan tata letak menu navigasi atas */
+.navbar {
+    background-color: var(--pure-white);
+    border-bottom: var(--neo-stroke);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    color: var(--dark-black);
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    color: var(--dark-black);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}

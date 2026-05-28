@@ -1,0 +1,51 @@
+/* [TAG: VARIABLES_&_RESET] IMMUNE - Variabel warna dan reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', sans-serif;
+}
+
+:root {
+    --neon-green: #00FF66;
+    --pure-white: #FFFFFF;
+    --dark-black: #000000;
+    --bg-light: #F0F0F0;
+    --neo-stroke: 4px solid #000000;
+    --neo-shadow: 8px 8px 0px #000000;
+    --neo-shadow-active: 2px 2px 0px #000000;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--dark-black);
+    overflow-x: hidden;
+}
+
+/* [TAG: GLOBAL_BUTTON_COMPONENT] IMMUNE - Aturan komponen tombol neubrutalism */
+.neo-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: var(--neo-stroke);
+    border-radius: 0px; 
+    box-shadow: var(--neo-shadow);
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-neon {
+    background-color: var(--neon-green);
+    color: var(--dark-black);
+}
+
+.btn-white {
+    background-color: var(--pure-white);
+    color: var(--dark-black);
+}
+
+/* Mekanisme klik tombol kaku khas neubrutalism */
+.neo-btn:active {
+    transform: translate(6px, 6px);
+    box-shadow: var(--neo-shadow-active);
+}

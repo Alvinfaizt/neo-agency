@@ -1,0 +1,129 @@
+/* [TAG: ABOUT_STYLES] Pengaturan Tata Letak Bento Grid untuk Seksi About Us */
+
+.about {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: var(--neo-stroke);
+}
+
+/* Pembuatan Grid Utama Bento */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    grid-template-areas:
+        "large large small-neon"
+        "medium small-black small-neon"
+        "medium horizontal horizontal";
+}
+
+/* Pengaturan Dasar Setiap Kotak Bento */
+.bento-box {
+    border: var(--neo-stroke);
+    box-shadow: var(--neo-shadow);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: 开;
+    position: relative;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Efek Hover Kaku ala Neubrutalism: Kotak seolah bergerak menekan bayangannya */
+.bento-box:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0px #000000;
+}
+
+/* Pemetaan Area Spesifik Kotak Bento */
+.box-large {
+    grid-area: large;
+}
+
+.box-medium {
+    grid-area: medium;
+}
+
+.box-horizontal {
+    grid-area: horizontal;
+}
+
+/* Variasi Warna Latar Belakang Kotak */
+.box-white {
+    background-color: var(--pure-white);
+}
+
+.box-neon {
+    background-color: var(--neon-green);
+}
+
+.box-black {
+    background-color: var(--dark-black);
+}
+
+/* Komponen Teks di dalam Kotak */
+.box-tag {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: var(--dark-black);
+    color: var(--pure-white);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border: 2px solid var(--dark-black);
+}
+
+.box-tag.tag-neon {
+    background-color: var(--neon-green);
+    color: var(--dark-black);
+}
+
+.box-heading {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.box-desc {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #222;
+}
+
+/* Helper Class untuk Teks Spesifik di Kotak Hitam */
+.text-white {
+    color: var(--pure-white) !important;
+}
+
+/* Komponen Angka Statistik Besar */
+.stat-number {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: -3px;
+}
+
+.bento-cta-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* [TAG: ABOUT_RESPONSIVE] Mengubah Grid menjadi 1 Kolom saat dibuka di HP */
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+        /* Menonaktifkan template area agar susunan mengalir vertikal otomatis */
+    }
+
+    .bento-box {
+        grid-area: auto !important;
+    }
+}

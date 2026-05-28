@@ -1,0 +1,43 @@
+/* [TAG: HERO_STYLES] Pengaturan gaya bagian papan utama (Hero) */
+.hero {
+    background-color: var(--pure-white);
+    border-bottom: var(--neo-stroke);
+    padding: 100px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+}
+
+.hero-title .highlight {
+    background-color: var(--neon-green);
+    padding: 0 10px;
+    border: var(--neo-stroke);
+    display: inline-block;
+    transform: rotate(-2px);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
