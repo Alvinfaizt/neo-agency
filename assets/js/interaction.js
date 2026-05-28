@@ -78,3 +78,27 @@ function initContactValidation() {
         }
     });
 }
+
+// [TAG: SCROLL_REVEAL_LOGIC] IntersectionObserver for scroll-triggered entrance animations
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    if (!revealElements.length) return;
+
+    // [TAG: SCROLL_REVEAL_OBSERVER] Configure observer with threshold and offset
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target); // Animasi hanya dipicu sekali
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(function (el) {
+        observer.observe(el);
+    });
+}

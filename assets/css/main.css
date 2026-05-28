@@ -101,3 +101,106 @@ h6 {
 .stat-number {
     font-size: clamp(2.5rem, 8vw + 0.5rem, 4.5rem);
 }
+
+/* [TAG: MODERN_FONT_SYSTEM] Smooth scroll behavior for anchor navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* [TAG: MODERN_FONT_SYSTEM] Display typography uses Space Grotesk for signature neo-brutal feel */
+h1, h2, h3, h4, h5, h6,
+.nav-logo,
+.neo-btn,
+.hero-title,
+.section-title,
+.info-heading,
+.box-heading,
+.stat-number,
+.card-title,
+.card-badge,
+.box-tag,
+.form-label,
+.info-badge {
+    font-family: 'Space Grotesk', 'Arial Black', sans-serif;
+}
+
+/* [TAG: MODERN_FONT_SYSTEM] Body text uses Inter for clean readability */
+body,
+.hero-subtitle,
+.card-text,
+.box-desc,
+.info-text,
+.form-input,
+.error-message {
+    font-family: 'Inter', 'Arial', sans-serif;
+}
+
+/* [TAG: SELECTION_STYLE] Branded text selection for consistent visual identity */
+::selection {
+    background-color: var(--neon-green);
+    color: var(--dark-black);
+}
+
+::-moz-selection {
+    background-color: var(--neon-green);
+    color: var(--dark-black);
+}
+
+/* [TAG: BODY_TEXTURE] Subtle grid-paper texture on page background for raw material feel */
+body {
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 60px,
+            rgba(0, 0, 0, 0.02) 60px,
+            rgba(0, 0, 0, 0.02) 61px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 60px,
+            rgba(0, 0, 0, 0.02) 60px,
+            rgba(0, 0, 0, 0.02) 61px
+        );
+}
+
+/* [TAG: ANIMATION_KEYFRAMES] Reusable animation definitions for component use */
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes float-gentle {
+    0%, 100% { transform: rotate(12deg) translate(0, 0); }
+    50% { transform: rotate(16deg) translate(-4px, -8px); }
+}
+
+/* [TAG: SCROLL_REVEAL_ANIMATION] CSS-driven entrance animations triggered by IntersectionObserver */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* [TAG: SECTION_TITLE_ACCENT] Neon underline accent bar for section headings */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: var(--neon-green);
+    margin-top: 12px;
+    border: 2px solid var(--dark-black);
+}

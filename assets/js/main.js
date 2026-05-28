@@ -44,3 +44,5 @@ if (btnHeroSecondaryAction) {
 }
 // [TAG: INITIALIZATION_CALL] Menjalankan fungsi validasi form dari interaction.js
 initContactValidation();
+// [TAG: SCROLL_REVEAL_INIT] Mengaktifkan animasi entrance saat scroll
+initScrollReveal();

@@ -96,4 +96,51 @@
         align-items: center;
         gap: 16px;
     }
+
+    .hero-sticker {
+        top: 16px;
+        right: 16px;
+        font-size: 0.65rem;
+        padding: 8px 12px;
+    }
+
+    .hero-cross {
+        display: none;
+    }
+}
+
+/* [TAG: VISUAL_REFINEMENT_HERO] Floating sticker badge - signature neubrutalism decorative element */
+.hero-sticker {
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    background-color: var(--neon-green);
+    color: var(--dark-black);
+    padding: 12px 18px;
+    font-family: 'Space Grotesk', 'Arial Black', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: var(--neo-stroke);
+    box-shadow: var(--neo-shadow);
+    transform: rotate(12deg);
+    z-index: 2;
+    animation: float-gentle 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* [TAG: VISUAL_REFINEMENT_HERO] Decorative crosshair marks in hero bottom-left */
+.hero-cross {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    font-size: 2rem;
+    font-family: 'Space Grotesk', monospace;
+    font-weight: 700;
+    color: var(--dark-black);
+    opacity: 0.1;
+    z-index: 0;
+    letter-spacing: 8px;
+    pointer-events: none;
 }

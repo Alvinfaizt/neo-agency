@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeonBrutal - Company Profile</title>
+    <meta name="description" content="NEO_AGENCY — Agensi kreatif radikal yang mendobrak batas digital dengan desain Neubrutalism dan performa Vanilla JS maksimal.">
+
+    <!-- [TAG: GOOGLE_FONTS] Modern neubrutalism typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- [TAG: GLOBAL_&_VARIABLES_CSS] Berkas CSS Utama -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -12,6 +18,8 @@
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/hero.css">
     <link rel="stylesheet" href="assets/css/services.css">
+    <!-- [TAG: MODULAR_MARQUEE_CSS] -->
+    <link rel="stylesheet" href="assets/css/marquee.css">
 </head>
 
 <body>
@@ -30,6 +38,11 @@
 
     <!-- [TAG: HERO_SECTION] Seksi utama Landing Page -->
     <header class="hero">
+        <!-- [TAG: VISUAL_REFINEMENT_HERO] Decorative floating sticker -->
+        <div class="hero-sticker">EST. 2024 ★</div>
+        <!-- [TAG: VISUAL_REFINEMENT_HERO] Decorative crosshair marks -->
+        <div class="hero-cross">+&nbsp;&nbsp;+&nbsp;&nbsp;+&nbsp;&nbsp;+</div>
+
         <div class="hero-container">
             <h1 class="hero-title">WE BUILD <span class="highlight">BOLD</span> DIGITAL EXPERIENCES.</h1>
             <p class="hero-subtitle">Kami adalah agensi kreatif yang mendobrak batas digital dengan desain radikal dan
@@ -42,9 +55,39 @@
         </div>
     </header>
 
+    <!-- [TAG: MARQUEE_STRIP] Decorative scrolling text banner -->
+    <div class="marquee-strip">
+        <div class="marquee-content">
+            <span>CREATIVE AGENCY</span>
+            <span class="marquee-separator">◆</span>
+            <span>WEB DEVELOPMENT</span>
+            <span class="marquee-separator">◆</span>
+            <span>UI/UX DESIGN</span>
+            <span class="marquee-separator">◆</span>
+            <span>BRAND STRATEGY</span>
+            <span class="marquee-separator">◆</span>
+            <span>NEUBRUTALISM</span>
+            <span class="marquee-separator">◆</span>
+            <span>VANILLA JS</span>
+            <span class="marquee-separator">◆</span>
+            <span>CREATIVE AGENCY</span>
+            <span class="marquee-separator">◆</span>
+            <span>WEB DEVELOPMENT</span>
+            <span class="marquee-separator">◆</span>
+            <span>UI/UX DESIGN</span>
+            <span class="marquee-separator">◆</span>
+            <span>BRAND STRATEGY</span>
+            <span class="marquee-separator">◆</span>
+            <span>NEUBRUTALISM</span>
+            <span class="marquee-separator">◆</span>
+            <span>VANILLA JS</span>
+            <span class="marquee-separator">◆</span>
+        </div>
+    </div>
+
     <link rel="stylesheet" href="assets/css/about.css">
 
-    <section id="about" class="about">
+    <section id="about" class="about scroll-reveal">
         <div class="about-container">
             <h2 class="section-title">WHO WE ARE</h2>
 
@@ -90,7 +133,7 @@
     </section>
 
     <!-- [TAG: SERVICES_SECTION] Seksi Daftar Layanan -->
-    <section id="services" class="services">
+    <section id="services" class="services scroll-reveal">
         <h2 class="section-title">WHAT WE DO</h2>
         <div class="services-grid">
 
@@ -109,10 +152,42 @@
                     out.</p>
             </div>
 
+            <!-- Card 3: Brand Strategy -->
+            <div class="neo-card">
+                <div class="card-badge badge-neon">STRATEGY</div>
+                <h3 class="card-title">Brand Identity</h3>
+                <p class="card-text">Membangun identitas brand yang kuat, konsisten, dan tak terlupakan di era digital.</p>
+            </div>
+
         </div>
     </section>
 
-    <!-- Masukkan ini di dalam tag <head> di bawah CSS komponen lainnya -->
+    <!-- [TAG: MARQUEE_STRIP_NEON] Reversed neon scrolling text banner -->
+    <div class="marquee-strip marquee-neon">
+        <div class="marquee-content marquee-reverse">
+            <span>BOLD DIGITAL EXPERIENCES</span>
+            <span class="marquee-separator">★</span>
+            <span>NO FRAMEWORKS</span>
+            <span class="marquee-separator">★</span>
+            <span>PURE PERFORMANCE</span>
+            <span class="marquee-separator">★</span>
+            <span>RADICAL DESIGN</span>
+            <span class="marquee-separator">★</span>
+            <span>100% CUSTOM</span>
+            <span class="marquee-separator">★</span>
+            <span>BOLD DIGITAL EXPERIENCES</span>
+            <span class="marquee-separator">★</span>
+            <span>NO FRAMEWORKS</span>
+            <span class="marquee-separator">★</span>
+            <span>PURE PERFORMANCE</span>
+            <span class="marquee-separator">★</span>
+            <span>RADICAL DESIGN</span>
+            <span class="marquee-separator">★</span>
+            <span>100% CUSTOM</span>
+            <span class="marquee-separator">★</span>
+        </div>
+    </div>
+
     <!-- [TAG: MODULAR_CONTACT_CSS] -->
     <link rel="stylesheet" href="assets/css/contact.css">
 
@@ -120,7 +195,7 @@
 
     <!-- Masukkan ini di dalam tag <body_> sebelum tag <script> -->
     <!-- [TAG: CONTACT_SECTION] Formulir Kontak Interaktif dengan Validasi Vanilla JS -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact scroll-reveal">
         <div class="contact-container">
             <h2 class="section-title">CONNECT WITH US</h2>
 
@@ -168,6 +243,41 @@
             </div>
         </div>
     </section>
+
+    <!-- [TAG: MODULAR_FOOTER_CSS] -->
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- [TAG: FOOTER_SECTION] Footer component -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <h2 class="footer-heading">LET'S CREATE SOMETHING <span class="highlight">BOLD</span> TOGETHER.</h2>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-col">
+                    <span class="footer-label">NAVIGATE</span>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <span class="footer-label">SOCIAL</span>
+                    <a href="#" class="footer-link">Instagram ↗</a>
+                    <a href="#" class="footer-link">LinkedIn ↗</a>
+                    <a href="#" class="footer-link">Dribbble ↗</a>
+                </div>
+                <div class="footer-col footer-col-right">
+                    <span class="footer-label">INFO</span>
+                    <p class="footer-text">Jakarta, Indonesia</p>
+                    <p class="footer-text">hello@neoagency.xyz</p>
+                </div>
+            </div>
+            <div class="footer-credit">
+                <span class="footer-credit-text">© 2026 NEO_AGENCY. All Rights Reserved.</span>
+                <span class="footer-credit-badge">BUILT WITH VANILLA JS ⚡</span>
+            </div>
+        </div>
+    </footer>
 
     <!-- [TAG: JAVASCRIPT_LINKS] Script modular menggunakan defer agar load berurutan -->
     <script src="assets/js/interaction.js" defer></script>

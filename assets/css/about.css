@@ -127,3 +127,22 @@
         grid-area: auto !important;
     }
 }
+
+/* [TAG: BENTO_HOVER_ACCENT] Neon border highlight on white box hover */
+.box-white:hover {
+    border-color: var(--neon-green);
+}
+
+/* [TAG: BENTO_HOVER_ACCENT] Neon border highlight on black box hover */
+.box-black:hover {
+    border-color: var(--neon-green);
+}
+
+/* [TAG: BENTO_TAG_ENHANCEMENT] Enhanced box tag with slight hover scale */
+.box-tag {
+    transition: transform 0.1s ease;
+}
+
+.bento-box:hover .box-tag {
+    transform: translate(-2px, -2px);
+}
