@@ -70,11 +70,26 @@ function initContactValidation() {
                 pesan: inputMessage.value
             });
 
-            // Memberikan notifikasi sukses kaku khas neubrutalism
-            alert(`TERIMA KASIH ${inputName.value.toUpperCase()}!\nPesan Anda berhasil dikirim secara asinkron.`);
+            // [TAG: TRUST_SIGNALS_FORM] Secure submit button visual transition
+            const submitBtn = document.getElementById('btn-submit-contact');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'TRANSMITTING DATA...';
+            }
 
-            // Mengosongkan form kembali setelah sukses
-            contactForm.reset();
+            // Memberikan notifikasi sukses kaku khas neubrutalism setelah render selesai
+            setTimeout(function () {
+                alert(`TERIMA KASIH ${inputName.value.toUpperCase()}!\nPesan Anda berhasil dikirim secara asinkron.`);
+
+                // Mengosongkan form kembali setelah sukses
+                contactForm.reset();
+
+                // Mengembalikan tombol submit ke state awal
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'SEND MESSAGE ↗';
+                }
+            }, 100);
         }
     });
 }
@@ -101,4 +116,42 @@ function initScrollReveal() {
     revealElements.forEach(function (el) {
         observer.observe(el);
     });
+}
+
+// [TAG: KINETIC_STATS_TICKER] Scroll-triggered count-up animation for About section bento box
+function initKineticStatsTicker() {
+    const statNode = document.querySelector('.stat-number');
+    if (!statNode) return;
+
+    const targetVal = parseInt(statNode.getAttribute('data-target'), 10) || 0;
+    
+    // Intersection Observer to run animation only when visible in viewport
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                animateCount(statNode, 0, targetVal, 1200); // animate over 1200ms
+                observer.unobserve(entry.target); // run only once
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    observer.observe(statNode);
+
+    function animateCount(element, start, end, duration) {
+        let startTime = null;
+
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const currentVal = Math.floor(progress * (end - start) + start);
+            element.textContent = currentVal + '+';
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        }
+
+        window.requestAnimationFrame(step);
+    }
 }

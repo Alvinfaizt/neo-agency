@@ -58,8 +58,8 @@
 }
 
 .card-text {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    line-height: 1.5;
-    color: #444;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-weight: 500;
+    line-height: 1.65;
+    color: #1a1a1a;
 }

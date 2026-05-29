@@ -46,3 +46,5 @@ if (btnHeroSecondaryAction) {
 initContactValidation();
 // [TAG: SCROLL_REVEAL_INIT] Mengaktifkan animasi entrance saat scroll
 initScrollReveal();
+// [TAG: KINETIC_STATS_TICKER] Menjalankan animasi hitung cepat statistik bento
+initKineticStatsTicker();

@@ -73,10 +73,11 @@
 
 .hero-subtitle {
     font-size: 1.2rem;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-weight: 500;
+    line-height: 1.65;
     margin-bottom: 40px;
-    color: #333;
+    color: #1a1a1a;
 }
 
 .hero-actions {
@@ -143,4 +144,71 @@
     z-index: 0;
     letter-spacing: 8px;
     pointer-events: none;
+}
+
+/* [TAG: SOCIAL_PROOF_LOGOS] Social Proof Client Logos Strip styling */
+.client-logos-strip {
+    background-color: var(--pure-white);
+    border-bottom: var(--neo-stroke);
+    padding: 24px 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.logos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logos-title {
+    font-family: 'Space Grotesk', 'Arial Black', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--dark-black);
+    text-transform: uppercase;
+}
+
+.logos-track {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-logo-svg {
+    color: var(--dark-black);
+    filter: grayscale(100%) opacity(0.4);
+    transition: filter 0.15s ease, transform 0.15s ease;
+    cursor: pointer;
+}
+
+.client-logo-svg:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.08);
+}
+
+@media (max-width: 991px) {
+    .logos-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .logos-track {
+        justify-content: center;
+        gap: 30px;
+    }
 }

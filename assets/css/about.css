@@ -25,7 +25,7 @@
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: 开;
+    justify-content: flex-start;
     position: relative;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
@@ -88,11 +88,11 @@
 }
 
 .box-desc {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-weight: 500;
     font-size: 0.95rem;
-    line-height: 1.5;
-    color: #222;
+    line-height: 1.65;
+    color: #1a1a1a;
 }
 
 /* Helper Class untuk Teks Spesifik di Kotak Hitam */
