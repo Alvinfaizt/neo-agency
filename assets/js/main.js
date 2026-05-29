@@ -31,6 +31,34 @@ if (btnNavbarCta) {
     });
 }
 
+// [TAG: SMOOTH_SCROLL_NAVIGATION_LOGIC] Smooth scroll for About & Services nav links
+// Mirrors the Contact Us button workflow: prevent default, calc offset, smooth scroll
+const navScrollLinks = document.querySelectorAll('.nav-scroll-link');
+
+navScrollLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Mengambil ID target dari atribut data-target
+        const targetId = link.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            // Mengambil tinggi navbar untuk offset kalkulasi agar posisi scroll pas
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+            // Kalkulasi posisi target dikurangi tinggi navbar biar tidak tertutup sticky menu
+            const targetPosition = targetSection.offsetTop - navbarHeight;
+
+            // Eksekusi gulir halaman (scroll) secara mulus murni menggunakan Vanilla JS
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 if (btnHeroPrimaryAction) {
     btnHeroPrimaryAction.addEventListener('click', function () {
         triggerButtonFeedback('Hero Explore Button');
