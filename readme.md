@@ -6,7 +6,7 @@ Proyek ini adalah platform web *Company Profile* interaktif yang dibangun menggu
 
 ## 📂 Struktur Folder Proyek
 
-Proyek ini distrukturkan secara modular untuk memastikan isolasi kode yang bersih, profesional, dan mudah dikelola oleh AI Agent (Cursor/Antigravity):
+Proyek ini distrukturkan secara modular untuk memastikan isolasi kode yang bersih, profesional, dan mudah dikelola oleh Users:
 
 ```text
 company-profile-neubrutalism/
