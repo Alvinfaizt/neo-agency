@@ -1,12 +1,12 @@
 /* [TAG: HERO_STYLES] Pengaturan gaya bagian papan utama (Hero) */
 .hero {
-    background-color: var(--pure-white);
+    background-color: var(--neon-green);
     border-bottom: var(--neo-stroke);
     padding: 100px 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
+    min-height: 560px;
     position: relative;
     overflow: hidden;
 }
@@ -25,31 +25,20 @@
         transparent 1.5px
     );
     background-size: 28px 28px;
-    opacity: 0.06;
+    opacity: 0.08;
     pointer-events: none;
     z-index: 0;
 }
 
-/* [TAG: VISUAL_REFINEMENT_HERO] Geometric accent shape - top-right corner */
 .hero::after {
-    content: '';
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    width: 160px;
-    height: 160px;
-    border: var(--neo-stroke);
-    background-color: var(--neon-green);
-    transform: rotate(15deg);
-    opacity: 0.18;
-    pointer-events: none;
-    z-index: 0;
+    display: none;
 }
 
 .hero-container {
-    max-width: 800px;
+    max-width: 550px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    text-align: left;
 }
 
 .hero-title {
@@ -57,11 +46,12 @@
     line-height: 1.1;
     margin-bottom: 24px;
     letter-spacing: -2px;
+    color: var(--dark-black);
 }
 
 /* [TAG: VISUAL_REFINEMENT_HERO] Structurally absolute highlight with rigid badge effect */
 .hero-title .highlight {
-    background-color: var(--neon-green);
+    background-color: var(--pure-white);
     padding: 2px 12px;
     border: var(--neo-stroke);
     display: inline-block;
@@ -72,50 +62,35 @@
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-family: 'Inter', 'Arial', sans-serif;
     font-weight: 500;
     line-height: 1.65;
     margin-bottom: 40px;
-    color: #1a1a1a;
+    color: var(--dark-black);
+    opacity: 0.85;
 }
 
 .hero-actions {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 16px;
 }
 
-/* [TAG: VISUAL_REFINEMENT_HERO] Responsive hero section for mobile viewports */
-@media (max-width: 768px) {
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .hero-sticker {
-        top: 16px;
-        right: 16px;
-        font-size: 0.65rem;
-        padding: 8px 12px;
-    }
-
-    .hero-cross {
-        display: none;
-    }
+.hero-actions .neo-btn {
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* [TAG: VISUAL_REFINEMENT_HERO] Floating sticker badge - signature neubrutalism decorative element */
+/* [TAG: VISUAL_REFINEMENT_HERO] Floating sticker badge */
 .hero-sticker {
     position: absolute;
     top: 32px;
     right: 40px;
-    background-color: var(--neon-green);
+    background-color: var(--pure-white);
     color: var(--dark-black);
     padding: 12px 18px;
     font-family: 'Space Grotesk', 'Arial Black', sans-serif;
@@ -131,19 +106,219 @@
     pointer-events: none;
 }
 
-/* [TAG: VISUAL_REFINEMENT_HERO] Decorative crosshair marks in hero bottom-left */
-.hero-cross {
+/* [TAG: HERO_DECORATIONS] New Floating Neubrutalist UI Elements */
+.hero-deco-dots {
     position: absolute;
-    bottom: 30px;
-    left: 40px;
-    font-size: 2rem;
-    font-family: 'Space Grotesk', monospace;
+    top: 80px;
+    left: 48%;
+    width: 60px;
+    height: 60px;
+    background-image: radial-gradient(
+        var(--dark-black) 3px,
+        transparent 3px
+    );
+    background-size: 18px 18px;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-deco-browser {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    width: 260px;
+    height: 200px;
+    background: var(--pure-white);
+    border: var(--neo-stroke);
+    box-shadow: var(--neo-shadow);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.deco-browser-bar {
+    height: 32px;
+    border-bottom: var(--neo-stroke);
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    gap: 6px;
+    background-color: var(--pure-white);
+}
+
+.deco-browser-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--dark-black);
+    border: 1px solid var(--dark-black);
+}
+
+.deco-browser-body {
+    background-color: var(--neon-green);
+    flex-grow: 1;
+    min-height: 120px;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%), linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%);
+    background-size: 20px 20px;
+}
+
+.hero-deco-search {
+    position: absolute;
+    top: 195px;
+    right: 40px;
+    width: 220px;
+    height: 44px;
+    background: var(--pure-white);
+    border: var(--neo-stroke);
+    box-shadow: var(--neo-shadow);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px 0 20px;
+    z-index: 2;
+}
+
+.deco-search-line {
+    width: 2px;
+    height: 18px;
+    background-color: var(--dark-black);
+    opacity: 0.4;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+.deco-search-btn {
+    width: 36px;
+    height: 36px;
+    background-color: var(--neon-green);
+    border: 3px solid var(--dark-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--dark-black);
-    opacity: 0.1;
-    z-index: 0;
-    letter-spacing: 8px;
-    pointer-events: none;
+}
+
+.hero-deco-terminal {
+    position: absolute;
+    bottom: 140px;
+    right: 280px;
+    width: 160px;
+    background: var(--pure-white);
+    border: var(--neo-stroke);
+    box-shadow: var(--neo-shadow);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.deco-terminal-bar {
+    height: 24px;
+    background-color: var(--neon-green);
+    border-bottom: var(--neo-stroke);
+    font-size: 0.65rem;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    letter-spacing: 4px;
+    color: var(--dark-black);
+    font-weight: bold;
+}
+
+.deco-terminal-body {
+    padding: 14px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: var(--dark-black);
+}
+
+.hero-deco-cursor {
+    position: absolute;
+    bottom: 110px;
+    right: 210px;
+    z-index: 3;
+    animation: float-gentle 5s ease-in-out infinite alternate;
+}
+
+.hero-deco-shape {
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    z-index: 2;
+    opacity: 0.7;
+    animation: rotate-slow 20s linear infinite;
+}
+
+.hero-cross {
+    display: none;
+}
+
+/* Animations */
+@keyframes blink-caret {
+    from, to { background-color: transparent }
+    50% { background-color: var(--dark-black); }
+}
+
+@keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* [TAG: VISUAL_REFINEMENT_HERO] Responsive hero section for mobile viewports */
+@media (max-width: 991px) {
+    .hero {
+        padding: 60px 24px 80px;
+        min-height: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    /* Hide decorations on tablets and mobile screens */
+    .hero-deco-dots,
+    .hero-deco-browser,
+    .hero-deco-search,
+    .hero-deco-terminal,
+    .hero-deco-cursor,
+    .hero-deco-shape {
+        display: none;
+    }
+
+    .hero-sticker {
+        top: 16px;
+        right: 16px;
+        font-size: 0.65rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .hero-actions .neo-btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* [TAG: SOCIAL_PROOF_LOGOS] Social Proof Client Logos Strip styling */

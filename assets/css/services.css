@@ -22,8 +22,9 @@
     background-color: var(--pure-white);
     border: var(--neo-stroke);
     box-shadow: var(--neo-shadow);
-    padding: 30px;
+    padding: 0;
     position: relative;
+    overflow: hidden;
     /* [TAG: INTERACTIVE_CARDS_SERVICES] Strict neubrutalism mechanical transition */
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     cursor: pointer;
@@ -41,12 +42,51 @@
     box-shadow: 2px 2px 0px #000000;
 }
 
+/* [TAG: CARD_HEADER_STRIP] Colored header strip inspired by modern neubrutalism card design */
+.card-header-strip {
+    background-color: var(--neon-green);
+    padding: 28px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--neo-stroke);
+    position: relative;
+}
+
+/* [TAG: CARD_HEADER_ICON] Decorative circle-plus icon on card header */
+.card-header-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 3px solid var(--dark-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-black);
+    background-color: transparent;
+    flex-shrink: 0;
+}
+
+/* [TAG: CARD_HEADER_DECO] Decorative folder/document icon in card header */
+.card-header-deco {
+    opacity: 0.6;
+}
+
+/* [TAG: CARD_BODY_CONTENT] Content area below the header strip */
+.card-body {
+    padding: 24px;
+    background-color: var(--pure-white);
+}
+
 .card-badge {
     display: inline-block;
     padding: 6px 12px;
     font-size: 0.8rem;
     border: var(--neo-stroke);
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .badge-neon { background-color: var(--neon-green); }

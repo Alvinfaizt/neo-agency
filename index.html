@@ -41,8 +41,48 @@
     <header class="hero">
         <!-- [TAG: VISUAL_REFINEMENT_HERO] Decorative floating sticker -->
         <div class="hero-sticker">EST. 2024 ★</div>
-        <!-- [TAG: VISUAL_REFINEMENT_HERO] Decorative crosshair marks -->
-        <div class="hero-cross">+&nbsp;&nbsp;+&nbsp;&nbsp;+&nbsp;&nbsp;+</div>
+
+        <!-- [TAG: HERO_DECORATIONS] Floating dot grid pattern -->
+        <div class="hero-deco-dots"></div>
+
+        <!-- [TAG: HERO_DECORATIONS] Browser window mockup -->
+        <div class="hero-deco-browser">
+            <div class="deco-browser-bar">
+                <span class="deco-browser-dot"></span>
+                <span class="deco-browser-dot"></span>
+                <span class="deco-browser-dot"></span>
+            </div>
+            <div class="deco-browser-body"></div>
+        </div>
+
+        <!-- [TAG: HERO_DECORATIONS] Floating search bar -->
+        <div class="hero-deco-search">
+            <span class="deco-search-line"></span>
+            <span class="deco-search-btn">⌕</span>
+        </div>
+
+        <!-- [TAG: HERO_DECORATIONS] Terminal/password box -->
+        <div class="hero-deco-terminal">
+            <div class="deco-terminal-bar">— □ ×</div>
+            <div class="deco-terminal-body">✱ ✱ ✱</div>
+        </div>
+
+        <!-- [TAG: HERO_DECORATIONS] Cursor pointer SVG -->
+        <div class="hero-deco-cursor">
+            <svg width="22" height="28" viewBox="0 0 22 28" fill="none">
+                <polygon points="1,1 1,22 7,17 12,27 16,25 11,15 20,15" fill="#00FF66" stroke="#000000" stroke-width="2"/>
+            </svg>
+        </div>
+
+        <!-- [TAG: HERO_DECORATIONS] Pen-tool geometric shape SVG -->
+        <div class="hero-deco-shape">
+            <svg width="90" height="80" viewBox="0 0 90 80" fill="none">
+                <polygon points="45,5 85,65 5,65" stroke="#000000" stroke-width="3" fill="none"/>
+                <circle cx="45" cy="5" r="5" fill="#000000"/>
+                <circle cx="85" cy="65" r="5" fill="#000000"/>
+                <circle cx="5" cy="65" r="5" fill="#000000"/>
+            </svg>
+        </div>
 
         <div class="hero-container">
             <h1 class="hero-title">WE BUILD <span class="highlight">BOLD</span> DIGITAL EXPERIENCES.</h1>
@@ -50,8 +90,8 @@
                 performa maksimal.</p>
 
             <div class="hero-actions">
-                <button id="btn-hero-primary" class="neo-btn btn-neon">Explore Work</button>
-                <button id="btn-hero-secondary" class="neo-btn btn-white">Our Services</button>
+                <button id="btn-hero-primary" class="neo-btn btn-neon">EXPLORE WORK</button>
+                <button id="btn-hero-secondary" class="neo-btn btn-white">OUR SERVICES</button>
             </div>
         </div>
     </header>
@@ -185,24 +225,39 @@
 
             <!-- Card 1: Web Development -->
             <div class="neo-card">
-                <div class="card-badge badge-neon">DEVELOPMENT</div>
-                <h3 class="card-title">Vanilla Engineering</h3>
-                <p class="card-text">Membangun web super cepat tanpa beban framework, murni performa tinggi.</p>
+                <div class="card-header-strip">
+                    <span class="card-badge badge-white">DEVELOPMENT</span>
+                    <span class="card-header-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Vanilla Engineering</h3>
+                    <p class="card-text">Membangun web super cepat tanpa beban framework, murni performa tinggi.</p>
+                </div>
             </div>
 
             <!-- Card 2: UI/UX Design -->
             <div class="neo-card">
-                <div class="card-badge badge-white">UI/UX DESIGN</div>
-                <h3 class="card-title">Neubrutalism Style</h3>
-                <p class="card-text">Desain berani, kontras tinggi, dan anti-mainstream yang membuat brand Anda stand
-                    out.</p>
+                <div class="card-header-strip">
+                    <span class="card-badge badge-white">UI/UX DESIGN</span>
+                    <span class="card-header-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Neubrutalism Style</h3>
+                    <p class="card-text">Desain berani, kontras tinggi, dan anti-mainstream yang membuat brand Anda stand
+                        out.</p>
+                </div>
             </div>
 
             <!-- Card 3: Brand Strategy -->
             <div class="neo-card">
-                <div class="card-badge badge-neon">STRATEGY</div>
-                <h3 class="card-title">Brand Identity</h3>
-                <p class="card-text">Membangun identitas brand yang kuat, konsisten, dan tak terlupakan di era digital.</p>
+                <div class="card-header-strip">
+                    <span class="card-badge badge-white">STRATEGY</span>
+                    <span class="card-header-icon">+</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Brand Identity</h3>
+                    <p class="card-text">Membangun identitas brand yang kuat, konsisten, dan tak terlupakan di era digital.</p>
+                </div>
             </div>
 
         </div>
