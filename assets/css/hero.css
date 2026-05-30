@@ -1,6 +1,6 @@
 /* [TAG: HERO_STYLES] Pengaturan gaya bagian papan utama (Hero) */
 .hero {
-    background-color: var(--neon-green);
+    background-color: var(--pure-white);
     border-bottom: var(--neo-stroke);
     padding: 100px 40px;
     display: flex;
@@ -51,7 +51,7 @@
 
 /* [TAG: VISUAL_REFINEMENT_HERO] Structurally absolute highlight with rigid badge effect */
 .hero-title .highlight {
-    background-color: var(--pure-white);
+    background-color: var(--neon-green);
     padding: 2px 12px;
     border: var(--neo-stroke);
     display: inline-block;
@@ -90,7 +90,7 @@
     position: absolute;
     top: 32px;
     right: 40px;
-    background-color: var(--pure-white);
+    background-color: var(--neon-green);
     color: var(--dark-black);
     padding: 12px 18px;
     font-family: 'Space Grotesk', 'Arial Black', sans-serif;
@@ -109,8 +109,8 @@
 /* [TAG: HERO_DECORATIONS] New Floating Neubrutalist UI Elements */
 .hero-deco-dots {
     position: absolute;
-    top: 80px;
-    left: 48%;
+    top: 40px;
+    left: 40px;
     width: 60px;
     height: 60px;
     background-image: radial-gradient(
@@ -156,11 +156,25 @@
 }
 
 .deco-browser-body {
-    background-color: var(--neon-green);
+    background-color: var(--pure-white);
     flex-grow: 1;
     min-height: 120px;
-    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%), linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%);
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 255, 102, 0.15) 25%, rgba(0, 255, 102, 0.15) 26%, transparent 27%, transparent 74%, rgba(0, 255, 102, 0.15) 75%, rgba(0, 255, 102, 0.15) 76%, transparent 77%), linear-gradient(90deg, transparent 24%, rgba(0, 255, 102, 0.15) 25%, rgba(0, 255, 102, 0.15) 26%, transparent 27%, transparent 74%, rgba(0, 255, 102, 0.15) 75%, rgba(0, 255, 102, 0.15) 76%, transparent 77%);
     background-size: 20px 20px;
+    position: relative;
+}
+
+.deco-browser-body::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    border: var(--neo-stroke);
+    background-color: var(--neon-green);
+    opacity: 0.15;
+    box-shadow: 4px 4px 0px var(--dark-black);
 }
 
 .hero-deco-search {

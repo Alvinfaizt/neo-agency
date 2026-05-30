@@ -44,7 +44,7 @@
 
 /* [TAG: CARD_HEADER_STRIP] Colored header strip inspired by modern neubrutalism card design */
 .card-header-strip {
-    background-color: var(--neon-green);
+    background-color: var(--pure-white);
     padding: 28px 24px;
     display: flex;
     align-items: center;
