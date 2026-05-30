@@ -155,3 +155,39 @@ function initKineticStatsTicker() {
         window.requestAnimationFrame(step);
     }
 }
+
+// [TAG: PORTFOLIO_FILTER_LOGIC_JS] Inisialisasi penyaringan portofolio murni Vanilla JS
+function initPortfolioFilter() {
+    const filterButtons = document.querySelectorAll('.portfolio-filters button');
+    const portfolioCards = document.querySelectorAll('.portfolio-grid .portfolio-card');
+
+    if (!filterButtons.length || !portfolioCards.length) return;
+
+    filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            // Hapus kelas aktif dari semua tombol filter
+            filterButtons.forEach(function (btn) {
+                btn.classList.remove('active');
+            });
+            // Tambahkan kelas aktif ke tombol yang sedang diklik
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            portfolioCards.forEach(function (card) {
+                const category = card.getAttribute('data-category');
+
+                // Cocokkan data-category dengan data-filter
+                if (filterValue === 'ALL_WORK') {
+                    card.classList.remove('hide');
+                } else if (filterValue === 'WEB_DEV' && category === 'web') {
+                    card.classList.remove('hide');
+                } else if (filterValue === 'BRANDING' && category === 'design') {
+                    card.classList.remove('hide');
+                } else {
+                    card.classList.add('hide');
+                }
+            });
+        });
+    });
+}

@@ -59,9 +59,19 @@ navScrollLinks.forEach(function (link) {
     });
 });
 
+// [TAG: HERO_EXPLORE_SCROLL_BINDING] Refactor click listener to scroll to Portfolio section with offset
 if (btnHeroPrimaryAction) {
-    btnHeroPrimaryAction.addEventListener('click', function () {
-        triggerButtonFeedback('Hero Explore Button');
+    btnHeroPrimaryAction.addEventListener('click', function (event) {
+        event.preventDefault();
+        const portfolioSection = document.getElementById('portfolio');
+        if (portfolioSection) {
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = portfolioSection.offsetTop - navbarHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
 }
 
@@ -76,3 +86,5 @@ initContactValidation();
 initScrollReveal();
 // [TAG: KINETIC_STATS_TICKER] Menjalankan animasi hitung cepat statistik bento
 initKineticStatsTicker();
+// Inisialisasi filter portofolio
+initPortfolioFilter();

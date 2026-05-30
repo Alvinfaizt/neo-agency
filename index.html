@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/hero.css">
     <link rel="stylesheet" href="assets/css/services.css">
+    <!-- [TAG: MODULAR_PORTFOLIO_CSS_LINK] Link stylesheet portfolio -->
+    <link rel="stylesheet" href="assets/css/portfolio.css">
     <!-- [TAG: MODULAR_MARQUEE_CSS] -->
     <link rel="stylesheet" href="assets/css/marquee.css">
 </head>
@@ -214,6 +216,59 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- [TAG: PORTFOLIO_SECTION_HTML] Seksi Portfolio Pekerjaan -->
+    <section id="portfolio" class="portfolio scroll-reveal">
+        <div class="portfolio-container">
+            <h2 class="section-title">EXPLORE WORK</h2>
+
+            <!-- Filter Kontrol Kategori -->
+            <div class="portfolio-filters">
+                <button class="neo-btn btn-white active" data-filter="ALL_WORK">ALL_WORK</button>
+                <button class="neo-btn btn-white" data-filter="WEB_DEV">WEB_DEV</button>
+                <button class="neo-btn btn-white" data-filter="BRANDING">BRANDING</button>
+            </div>
+
+            <!-- Grid Item Portfolio -->
+            <div id="portfolio-grid" class="portfolio-grid">
+                <!-- Proyek 1: Web Development -->
+                <div class="portfolio-card" data-category="web">
+                    <div class="project-img-box" style="background-color: var(--neon-green);">
+                        <!-- Visual placeholder box -->
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge badge-black">WEB_DEV</span>
+                        <h3 class="project-title">PROJECT_ALTIMA</h3>
+                        <p class="project-desc">Pembangunan arsitektur headless CMS web yang super cepat menggunakan vanilla web stack murni.</p>
+                    </div>
+                </div>
+
+                <!-- Proyek 2: Branding/Design -->
+                <div class="portfolio-card" data-category="design">
+                    <div class="project-img-box" style="background-color: var(--pure-white);">
+                        <!-- Visual placeholder box -->
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge badge-black">BRANDING</span>
+                        <h3 class="project-title">KAIZEN_IDENTITY</h3>
+                        <p class="project-desc">Identitas merek visual baru dengan pendekatan desain neubrutalism radikal yang berani.</p>
+                    </div>
+                </div>
+
+                <!-- Proyek 3: Web Development -->
+                <div class="portfolio-card" data-category="web">
+                    <div class="project-img-box" style="background-color: var(--dark-black);">
+                        <!-- Visual placeholder box -->
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge badge-neon">WEB_DEV</span>
+                        <h3 class="project-title">APEX_PORTAL</h3>
+                        <p class="project-desc">Sistem portal dasbor kustom berkinerja tinggi yang responsif murni dengan Vanilla JS.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
