@@ -81,17 +81,17 @@ body {
     animation: float-gentle 9s ease-in-out infinite alternate-reverse;
 }
 
-/* 3. Portfolio Section Ornaments */
+/* 3. Portfolio Section Ornaments (Pindahkan menjauhi teks heading sebelah kiri) */
 .portfolio .neo-shape-1 {
-    top: 6%;
-    left: 3%;
+    top: 4%;
+    right: 4%;
     transform: rotate(-15deg);
     animation: float-gentle 8s ease-in-out infinite alternate;
 }
 
 .portfolio .neo-shape-2 {
-    bottom: 6%;
-    right: 3%;
+    bottom: 4%;
+    left: 4%;
     transform: rotate(10deg);
     animation: float-gentle 7s ease-in-out infinite alternate-reverse;
 }
