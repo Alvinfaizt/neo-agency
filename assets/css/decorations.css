@@ -27,33 +27,6 @@ body {
     overflow: hidden;
 }
 
-/* Custom full-width running text marquee strip */
-.neo-marquee-strip {
-    background-color: var(--neon-green);
-    border-top: 4px solid var(--dark-black);
-    border-bottom: 4px solid var(--dark-black);
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 14px 0;
-    width: 100%;
-    position: relative;
-    z-index: 10;
-}
-
-.neo-marquee-strip .marquee-content {
-    display: inline-flex;
-    animation: marquee-scroll 25s linear infinite;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 800;
-    font-size: 1.25rem;
-    color: var(--dark-black);
-    text-transform: uppercase;
-}
-
-.neo-marquee-strip .marquee-separator {
-    margin: 0 24px;
-}
-
 /* Abstract absolute-positioned geometric shapes */
 .neo-shape {
     position: absolute;
@@ -78,16 +51,16 @@ body {
 
 /* --- Penempatan Khusus per Seksi (Outer Margins) --- */
 
-/* 1. Hero Section Ornaments */
+/* 1. Hero Section Ornaments (Ditempatkan lebih jauh di tepian agar tidak menutupi teks utama) */
 .hero .neo-shape-1 {
-    top: 15%;
+    top: 8%;
     left: 3%;
     transform: rotate(-12deg);
     animation: float-gentle 6s ease-in-out infinite alternate;
 }
 
 .hero .neo-shape-2 {
-    bottom: 12%;
+    bottom: 8%;
     right: 3%;
     transform: rotate(18deg);
     animation: float-gentle 8s ease-in-out infinite alternate-reverse;
@@ -138,17 +111,24 @@ body {
     animation: float-gentle 6s ease-in-out infinite alternate-reverse;
 }
 
-/* 5. Contact Section Ornaments */
+/* 5. Contact Section Ornaments (Pindahkan menjauhi teks headings sebelah kiri) */
 .contact .neo-shape-1 {
-    top: 12%;
-    left: 4%;
+    top: 5%;
+    right: 4%;
     transform: rotate(14deg);
     animation: float-gentle 7s ease-in-out infinite alternate;
 }
 
 .contact .neo-shape-2 {
-    bottom: 12%;
-    right: 4%;
+    bottom: 5%;
+    left: 4%;
     transform: rotate(-10deg);
     animation: float-gentle 8s ease-in-out infinite alternate-reverse;
+}
+
+/* Sembunyikan ornamen di layar tablet dan handphone agar tidak merusak keterbacaan teks */
+@media (max-width: 992px) {
+    .neo-shape {
+        display: none !important;
+    }
 }
