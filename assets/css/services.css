@@ -1,11 +1,11 @@
-/* [TAG: SERVICES_STYLES] Pengaturan layout grid untuk halaman Layanan */
+/* [TAG: SERVICES_STYLES_CSS_POLISH] Pengaturan layout grid dan komponen kartu Layanan */
 .services {
     padding: 80px 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* [TAG: SECTION_TITLE_BASE] Global section title - font-size controlled by clamp() in main.css */
+/* [TAG: SECTION_TITLE_BASE] Global section title */
 .section-title {
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -15,7 +15,7 @@
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 32px;
 }
 
 .neo-card {
@@ -39,58 +39,14 @@
 /* [TAG: INTERACTIVE_CARDS_SERVICES] Pressed state returns card to flat rest */
 .neo-card:active {
     transform: translate(4px, 4px);
-    box-shadow: 2px 2px 0px #000000;
+    box-shadow: var(--neo-shadow-active);
 }
 
-/* [TAG: CARD_HEADER_STRIP] Colored header strip inspired by modern neubrutalism card design */
-.card-header-strip {
-    background-color: var(--pure-white);
-    padding: 28px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: var(--neo-stroke);
-    position: relative;
-}
-
-/* [TAG: CARD_HEADER_ICON] Decorative circle-plus icon on card header */
-.card-header-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 3px solid var(--dark-black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--dark-black);
-    background-color: transparent;
-    flex-shrink: 0;
-}
-
-/* [TAG: CARD_HEADER_DECO] Decorative folder/document icon in card header */
-.card-header-deco {
-    opacity: 0.6;
-}
-
-/* [TAG: CARD_BODY_CONTENT] Content area below the header strip */
+/* [TAG: CARD_BODY_CONTENT] Content area inside card */
 .card-body {
     padding: 24px;
     background-color: var(--pure-white);
 }
-
-.card-badge {
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: 0.8rem;
-    border: var(--neo-stroke);
-    margin-bottom: 14px;
-}
-
-.badge-neon { background-color: var(--neon-green); }
-.badge-white { background-color: var(--pure-white); }
 
 .card-title {
     font-size: 1.8rem;
@@ -102,4 +58,32 @@
     font-weight: 500;
     line-height: 1.65;
     color: #1a1a1a;
+}
+
+/* Komponen Badge Khusus Layanan dengan Border 2px */
+.service-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    border: 2px solid var(--dark-black);
+    background-color: var(--pure-white);
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+/* Komponen Icon Box Kotak Hitam Kaku khas Neubrutalisme */
+.service-icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: var(--dark-black);
+    color: var(--neon-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--dark-black);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

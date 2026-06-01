@@ -191,3 +191,34 @@ function initPortfolioFilter() {
         });
     });
 }
+
+// [TAG: SERVICES_MICRO_INTERACTION_JS] Inisialisasi efek hover interaktif kartu layanan
+function initServicesHoverEffect() {
+    const serviceCards = document.querySelectorAll('#services .neo-card');
+
+    if (!serviceCards.length) return;
+
+    serviceCards.forEach(function (card) {
+        const badge = card.querySelector('.service-badge');
+        const iconBox = card.querySelector('.service-icon-box');
+
+        card.addEventListener('mouseenter', function () {
+            if (badge) {
+                badge.style.backgroundColor = 'var(--neon-green)';
+            }
+            if (iconBox) {
+                // Memberikan efek putaran mekanis kaku khas neubrutalisme
+                iconBox.style.transform = 'rotate(15deg) scale(1.1)';
+            }
+        });
+
+        card.addEventListener('mouseleave', function () {
+            if (badge) {
+                badge.style.backgroundColor = 'var(--pure-white)';
+            }
+            if (iconBox) {
+                iconBox.style.transform = 'none';
+            }
+        });
+    });
+}

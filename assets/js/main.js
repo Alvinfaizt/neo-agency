@@ -75,9 +75,19 @@ if (btnHeroPrimaryAction) {
     });
 }
 
+// [TAG: NAVBAR_SERVICES_SCROLL_BINDING] Refactor click listener to scroll to Services section with offset
 if (btnHeroSecondaryAction) {
-    btnHeroSecondaryAction.addEventListener('click', function () {
-        triggerButtonFeedback('Hero Services Button');
+    btnHeroSecondaryAction.addEventListener('click', function (event) {
+        event.preventDefault();
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = servicesSection.offsetTop - navbarHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
 }
 // [TAG: INITIALIZATION_CALL] Menjalankan fungsi validasi form dari interaction.js
@@ -88,3 +98,5 @@ initScrollReveal();
 initKineticStatsTicker();
 // Inisialisasi filter portofolio
 initPortfolioFilter();
+// Inisialisasi efek hover layanan
+initServicesHoverEffect();
