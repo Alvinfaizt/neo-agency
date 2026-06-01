@@ -1,0 +1,154 @@
+/* [TAG: ORNAMENTS_STYLES_CSS] Stylesheet untuk Ornamen dan Dekorasi Neubrutalisme */
+
+/* Background dot-matrix pattern untuk body */
+body {
+    background-image:
+        radial-gradient(rgba(0, 0, 0, 0.04) 2px, transparent 2px),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 60px,
+            rgba(0, 0, 0, 0.02) 60px,
+            rgba(0, 0, 0, 0.02) 61px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 60px,
+            rgba(0, 0, 0, 0.02) 60px,
+            rgba(0, 0, 0, 0.02) 61px
+        );
+    background-size: 24px 24px, 100% 100%, 100% 100%;
+}
+
+/* Memastikan elemen pembatas seksi bersifat relatif untuk absolute positioning ornamen */
+.hero, .about, .portfolio, .services, .contact {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Custom full-width running text marquee strip */
+.neo-marquee-strip {
+    background-color: var(--neon-green);
+    border-top: 4px solid var(--dark-black);
+    border-bottom: 4px solid var(--dark-black);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 14px 0;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.neo-marquee-strip .marquee-content {
+    display: inline-flex;
+    animation: marquee-scroll 25s linear infinite;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--dark-black);
+    text-transform: uppercase;
+}
+
+.neo-marquee-strip .marquee-separator {
+    margin: 0 24px;
+}
+
+/* Abstract absolute-positioned geometric shapes */
+.neo-shape {
+    position: absolute;
+    border: 4px solid var(--dark-black);
+    box-shadow: 8px 8px 0px var(--dark-black);
+    z-index: 0; /* Letakkan di bawah teks atau card seksi agar tidak menutupi interaction */
+    pointer-events: none;
+}
+
+.neo-shape.square {
+    width: 70px;
+    height: 70px;
+    background-color: var(--neon-green);
+}
+
+.neo-shape.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--pure-white);
+}
+
+/* --- Penempatan Khusus per Seksi (Outer Margins) --- */
+
+/* 1. Hero Section Ornaments */
+.hero .neo-shape-1 {
+    top: 15%;
+    left: 3%;
+    transform: rotate(-12deg);
+    animation: float-gentle 6s ease-in-out infinite alternate;
+}
+
+.hero .neo-shape-2 {
+    bottom: 12%;
+    right: 3%;
+    transform: rotate(18deg);
+    animation: float-gentle 8s ease-in-out infinite alternate-reverse;
+}
+
+/* 2. About Section Ornaments */
+.about .neo-shape-1 {
+    top: 8%;
+    right: 4%;
+    transform: rotate(15deg);
+    animation: float-gentle 7s ease-in-out infinite alternate;
+}
+
+.about .neo-shape-2 {
+    bottom: 8%;
+    left: 4%;
+    transform: rotate(-8deg);
+    animation: float-gentle 9s ease-in-out infinite alternate-reverse;
+}
+
+/* 3. Portfolio Section Ornaments */
+.portfolio .neo-shape-1 {
+    top: 6%;
+    left: 3%;
+    transform: rotate(-15deg);
+    animation: float-gentle 8s ease-in-out infinite alternate;
+}
+
+.portfolio .neo-shape-2 {
+    bottom: 6%;
+    right: 3%;
+    transform: rotate(10deg);
+    animation: float-gentle 7s ease-in-out infinite alternate-reverse;
+}
+
+/* 4. Services Section Ornaments */
+.services .neo-shape-1 {
+    top: 10%;
+    right: 3%;
+    transform: rotate(8deg);
+    animation: float-gentle 9s ease-in-out infinite alternate;
+}
+
+.services .neo-shape-2 {
+    bottom: 10%;
+    left: 3%;
+    transform: rotate(-12deg);
+    animation: float-gentle 6s ease-in-out infinite alternate-reverse;
+}
+
+/* 5. Contact Section Ornaments */
+.contact .neo-shape-1 {
+    top: 12%;
+    left: 4%;
+    transform: rotate(14deg);
+    animation: float-gentle 7s ease-in-out infinite alternate;
+}
+
+.contact .neo-shape-2 {
+    bottom: 12%;
+    right: 4%;
+    transform: rotate(-10deg);
+    animation: float-gentle 8s ease-in-out infinite alternate-reverse;
+}

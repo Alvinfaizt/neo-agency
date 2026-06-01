@@ -2,8 +2,26 @@
 const btnNavbarCta = document.getElementById('btn-cta-nav');
 const btnHeroPrimaryAction = document.getElementById('btn-hero-primary');
 const btnHeroSecondaryAction = document.getElementById('btn-hero-secondary');
+const navHome = document.getElementById('nav-home');
+const navLogo = document.getElementById('nav-logo');
 
 // [TAG: EVENT_LISTENERS_ASSIGNMENT] Menghubungkan element dengan aksi interaksi
+
+// [TAG: SMOOTH_SCROLL_TO_TOP_JS] Hubungkan Home dan Logo dengan scroll ke atas mulus
+if (navHome) {
+    navHome.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+if (navLogo) {
+    navLogo.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
 if (btnNavbarCta) {
     btnNavbarCta.addEventListener('click', function () {
         // Mengambil elemen target seksi kontak
