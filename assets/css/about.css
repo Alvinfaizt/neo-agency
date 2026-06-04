@@ -5,6 +5,7 @@
     max-width: 1200px;
     margin: 0 auto;
     border-bottom: var(--neo-stroke);
+    scroll-margin-top: 100px;
 }
 
 /* Pembuatan Grid Utama Bento */
@@ -47,6 +48,14 @@
 
 .box-horizontal {
     grid-area: horizontal;
+}
+
+.box-neon.box-small {
+    grid-area: small-neon;
+}
+
+.box-black.box-small {
+    grid-area: small-black;
 }
 
 /* Variasi Warna Latar Belakang Kotak */

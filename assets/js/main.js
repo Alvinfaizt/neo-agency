@@ -118,3 +118,21 @@ initKineticStatsTicker();
 initPortfolioFilter();
 // Inisialisasi efek hover layanan
 initServicesHoverEffect();
+
+// [TAG: THEME_TOGGLE_LOGIC] Dark/light theme toggle with local storage persistence
+const themeToggleBtn = document.getElementById('theme-toggle');
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function () {
+        document.body.classList.toggle('dark-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeToggleBtn.innerHTML = isDark ? '<span class="toggle-icon">☀</span>' : '<span class="toggle-icon">◑</span>';
+    });
+    
+    // Check localStorage on load to set theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggleBtn.innerHTML = '<span class="toggle-icon">☀</span>';
+    }
+}

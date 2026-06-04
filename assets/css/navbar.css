@@ -39,3 +39,28 @@
     text-decoration: underline;
     text-underline-offset: 6px;
 }
+
+/* Custom theme toggle button in navbar */
+.theme-toggle-btn {
+    background-color: var(--pure-white);
+    color: var(--dark-black);
+    border: var(--neo-stroke);
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--dark-black);
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theme-toggle-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--dark-black);
+    background-color: var(--neon-green);
+}
+.theme-toggle-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--dark-black);
+}

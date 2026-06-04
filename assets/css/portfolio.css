@@ -4,6 +4,7 @@
     padding: 80px 40px;
     max-width: 1200px;
     margin: 0 auto;
+    scroll-margin-top: 100px;
 }
 
 /* Container untuk tombol filter */
@@ -124,4 +125,145 @@
 /* Utilitas penyembunyian item filter */
 .hide {
     display: none !important;
+}
+
+/* Custom Portfolio Visual Widgets styling */
+.pf-widget {
+    position: relative;
+    width: 85%;
+    height: 75%;
+    border: var(--neo-stroke);
+    box-shadow: 6px 6px 0px #000000;
+    background: var(--pure-white);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-card:hover .pf-widget {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* Altima (CMS/Web Dev) Widget */
+.pf-altima {
+    background: #FFFFFF;
+}
+.pf-altima-bar {
+    height: 20px;
+    border-bottom: 2px solid #000000;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    gap: 4px;
+    background: #FFFFFF;
+}
+.pf-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #000000;
+}
+.pf-altima-body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    height: 100%;
+}
+.pf-code-line {
+    height: 6px;
+    background: #000000;
+    border-radius: 3px;
+}
+.pf-code-line.short { width: 30%; }
+.pf-code-line.long { width: 85%; }
+.pf-code-line.medium { width: 60%; }
+.pf-badge-speed {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    background: var(--neon-green);
+    border: 2px solid #000000;
+    padding: 2px 6px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 2px 2px 0px #000000;
+    transform: rotate(-10deg);
+}
+
+/* Kaizen (Branding) Widget */
+.pf-kaizen {
+    background: var(--neon-green);
+    justify-content: center;
+    align-items: center;
+}
+.pf-kaizen-text {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: -2px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.pf-kaizen-banner {
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    color: #000000;
+    padding: 2px 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    transform: rotate(5deg);
+    position: absolute;
+    bottom: 20px;
+    box-shadow: 2px 2px 0px #000000;
+}
+.pf-star {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #000000;
+    animation: rotate-slow 10s linear infinite;
+}
+
+/* Apex (Dashboard) Widget */
+.pf-apex {
+    background: #111111;
+    color: #FFFFFF;
+    justify-content: space-between;
+    padding: 12px;
+    height: 100%;
+}
+.pf-apex-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+}
+.pf-metric-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    color: #00FF66;
+    font-weight: bold;
+}
+.pf-metric-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.pf-apex-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 45px;
+}
+.pf-chart-bar {
+    flex-grow: 1;
+    background: #00FF66;
+    border: 2px solid #FFFFFF;
 }
