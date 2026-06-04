@@ -1,9 +1,9 @@
 /* [TAG: FOOTER_STYLES] Neubrutalism footer component */
 
 .footer {
-    background-color: var(--dark-black);
-    color: var(--pure-white);
-    border-top: var(--neo-stroke);
+    background-color: #000000;
+    color: #FFFFFF;
+    border-top: 4px solid var(--border-color);
     padding: 60px 40px 40px;
 }
 
@@ -25,15 +25,15 @@
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -1px;
-    color: var(--pure-white);
+    color: #FFFFFF;
 }
 
 /* [TAG: FOOTER_HIGHLIGHT] Rotated neon highlight badge in heading */
 .footer-heading .highlight {
-    background-color: var(--neon-green);
-    color: var(--dark-black);
+    background-color: #00FF66;
+    color: #000000;
     padding: 2px 10px;
-    border: 3px solid var(--pure-white);
+    border: 3px solid #FFFFFF;
     display: inline-block;
     transform: rotate(-1deg);
 }
@@ -62,14 +62,14 @@
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 3px;
-    color: var(--neon-green);
+    color: #00FF66;
     margin-bottom: 8px;
     text-transform: uppercase;
 }
 
 /* [TAG: FOOTER_LINK] Navigation links with hover shift */
 .footer-link {
-    color: var(--pure-white);
+    color: #FFFFFF;
     text-decoration: none;
     font-family: 'Inter', 'Arial', sans-serif;
     font-size: 1rem;
@@ -79,7 +79,7 @@
 }
 
 .footer-link:hover {
-    color: var(--neon-green);
+    color: #00FF66;
     padding-left: 8px;
 }
 
@@ -113,13 +113,13 @@
 
 /* [TAG: FOOTER_BADGE] Branded credit badge with neubrutalism style */
 .footer-credit-badge {
-    background-color: var(--neon-green);
-    color: var(--dark-black);
+    background-color: #00FF66;
+    color: #000000;
     padding: 6px 14px;
     font-family: 'Space Grotesk', 'Arial Black', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
-    border: 2px solid var(--pure-white);
+    border: 2px solid #FFFFFF;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -127,7 +127,7 @@
 
 .footer-credit-badge:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0px var(--pure-white);
+    box-shadow: 4px 4px 0px #FFFFFF;
 }
 
 /* [TAG: FOOTER_RESPONSIVE] Mobile responsive footer layout */

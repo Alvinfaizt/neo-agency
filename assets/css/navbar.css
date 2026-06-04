@@ -1,7 +1,7 @@
 /* [TAG: NAVBAR_STYLES] IMMUNE - Pengaturan tata letak menu navigasi atas */
 .navbar {
-    background-color: var(--pure-white);
-    border-bottom: var(--neo-stroke);
+    background-color: var(--surface-primary);
+    border-bottom: 4px solid var(--border-color);
     padding: 20px 40px;
     position: sticky;
     top: 0;
@@ -18,7 +18,7 @@
 
 .nav-logo {
     font-size: 1.5rem;
-    color: var(--dark-black);
+    color: var(--text-primary);
     text-decoration: none;
     letter-spacing: -1px;
 }
@@ -30,7 +30,7 @@
 }
 
 .nav-item {
-    color: var(--dark-black);
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 1rem;
 }
@@ -40,27 +40,88 @@
     text-underline-offset: 6px;
 }
 
-/* Custom theme toggle button in navbar */
+/* Theme toggle button */
 .theme-toggle-btn {
-    background-color: var(--pure-white);
-    color: var(--dark-black);
-    border: var(--neo-stroke);
+    background-color: var(--surface-primary);
+    color: var(--text-primary);
+    border: 3px solid var(--border-color);
     padding: 8px 12px;
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
-    box-shadow: 4px 4px 0px var(--dark-black);
-    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+    box-shadow: 3px 3px 0px var(--shadow-color);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.theme-toggle-btn:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--dark-black);
-    background-color: var(--neon-green);
-}
 .theme-toggle-btn:active {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px var(--dark-black);
+    box-shadow: 1px 1px 0px var(--shadow-color);
+}
+
+/* Hamburger menu button for mobile */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 110;
+}
+.hamburger-btn span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--text-primary);
+    margin: 5px 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Mobile responsive navbar */
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--surface-primary);
+        border-left: 4px solid var(--border-color);
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        padding: 40px;
+        transition: right 0.3s ease;
+        z-index: 105;
+    }
+    .nav-links.open {
+        right: 0;
+    }
+    /* Overlay backdrop */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 101;
+    }
+    .nav-overlay.active {
+        display: block;
+    }
 }

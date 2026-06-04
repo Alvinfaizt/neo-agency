@@ -11,6 +11,7 @@
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: -1px;
+    color: var(--text-primary);
 }
 
 .services-grid {
@@ -20,24 +21,23 @@
 }
 
 .neo-card {
-    background-color: var(--pure-white);
-    border: var(--neo-stroke);
-    box-shadow: var(--neo-shadow);
+    background-color: var(--surface-primary);
+    border: 4px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--shadow-color);
     padding: 0;
     position: relative;
     overflow: hidden;
-    /* [TAG: INTERACTIVE_CARDS_SERVICES] Strict neubrutalism mechanical transition */
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     cursor: pointer;
 }
 
-/* [TAG: INTERACTIVE_CARDS_SERVICES] Physical elevation hover - shift up-left with deeper hard shadow */
+/* Physical elevation hover */
 .neo-card:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 12px 12px 0px #000000;
+    box-shadow: 10px 10px 0px var(--shadow-color);
 }
 
-/* [TAG: INTERACTIVE_CARDS_SERVICES] Pressed state returns card to flat rest */
+/* Pressed state */
 .neo-card:active {
     transform: translate(4px, 4px);
     box-shadow: var(--neo-shadow-active);
@@ -46,19 +46,20 @@
 /* [TAG: CARD_BODY_CONTENT] Content area inside card */
 .card-body {
     padding: 24px;
-    background-color: var(--pure-white);
+    background-color: var(--surface-primary);
 }
 
 .card-title {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    color: var(--text-primary);
 }
 
 .card-text {
     font-family: 'Inter', 'Arial', sans-serif;
     font-weight: 500;
     line-height: 1.65;
-    color: #1a1a1a;
+    color: var(--text-secondary);
 }
 
 /* Komponen Badge Khusus Layanan dengan Border 2px */
@@ -68,8 +69,9 @@
     font-size: 0.8rem;
     font-weight: 700;
     font-family: 'Space Grotesk', sans-serif;
-    border: 2px solid var(--dark-black);
-    background-color: var(--pure-white);
+    border: 2px solid var(--border-color);
+    background-color: var(--surface-primary);
+    color: var(--text-primary);
     text-transform: uppercase;
     transition: background-color 0.2s ease;
 }
@@ -78,13 +80,13 @@
 .service-icon-box {
     width: 48px;
     height: 48px;
-    background-color: var(--dark-black);
+    background-color: var(--border-color);
     color: var(--neon-green);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    border: 2px solid var(--dark-black);
+    border: 2px solid var(--border-color);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

@@ -1,26 +1,5 @@
 /* [TAG: ORNAMENTS_STYLES_CSS] Stylesheet untuk Ornamen dan Dekorasi Neubrutalisme */
 
-/* Background dot-matrix pattern untuk body */
-body {
-    background-image:
-        radial-gradient(rgba(0, 0, 0, 0.04) 2px, transparent 2px),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 60px,
-            rgba(0, 0, 0, 0.02) 60px,
-            rgba(0, 0, 0, 0.02) 61px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 60px,
-            rgba(0, 0, 0, 0.02) 60px,
-            rgba(0, 0, 0, 0.02) 61px
-        );
-    background-size: 24px 24px, 100% 100%, 100% 100%;
-}
-
 /* Memastikan elemen pembatas seksi bersifat relatif untuk absolute positioning ornamen */
 .hero, .about, .portfolio, .services, .contact {
     position: relative;
@@ -30,9 +9,9 @@ body {
 /* Abstract absolute-positioned geometric shapes */
 .neo-shape {
     position: absolute;
-    border: 4px solid var(--dark-black);
-    box-shadow: 8px 8px 0px var(--dark-black);
-    z-index: 0; /* Letakkan di bawah teks atau card seksi agar tidak menutupi interaction */
+    border: 4px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--shadow-color);
+    z-index: 0;
     pointer-events: none;
 }
 
@@ -46,12 +25,12 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: var(--pure-white);
+    background-color: var(--surface-primary);
 }
 
 /* --- Penempatan Khusus per Seksi (Outer Margins) --- */
 
-/* 1. Hero Section Ornaments (Ditempatkan lebih jauh di tepian agar tidak menutupi teks utama) */
+/* 1. Hero Section Ornaments */
 .hero .neo-shape-1 {
     top: 8%;
     left: 3%;
@@ -81,7 +60,7 @@ body {
     animation: float-gentle 9s ease-in-out infinite alternate-reverse;
 }
 
-/* 3. Portfolio Section Ornaments (Pindahkan menjauhi teks heading sebelah kiri) */
+/* 3. Portfolio Section Ornaments */
 .portfolio .neo-shape-1 {
     top: 4%;
     right: 4%;
@@ -111,7 +90,7 @@ body {
     animation: float-gentle 6s ease-in-out infinite alternate-reverse;
 }
 
-/* 5. Contact Section Ornaments (Pindahkan menjauhi teks headings sebelah kiri) */
+/* 5. Contact Section Ornaments */
 .contact .neo-shape-1 {
     top: 5%;
     right: 4%;

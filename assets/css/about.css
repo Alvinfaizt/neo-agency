@@ -4,7 +4,7 @@
     padding: 80px 40px;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: var(--neo-stroke);
+    border-bottom: 4px solid var(--border-color);
     scroll-margin-top: 100px;
 }
 
@@ -21,8 +21,8 @@
 
 /* Pengaturan Dasar Setiap Kotak Bento */
 .bento-box {
-    border: var(--neo-stroke);
-    box-shadow: var(--neo-shadow);
+    border: 4px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--shadow-color);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@
 /* Efek Hover Kaku ala Neubrutalism: Kotak seolah bergerak menekan bayangannya */
 .bento-box:hover {
     transform: translate(4px, 4px);
-    box-shadow: 4px 4px 0px #000000;
+    box-shadow: 2px 2px 0px var(--shadow-color);
 }
 
 /* Pemetaan Area Spesifik Kotak Bento */
@@ -60,7 +60,7 @@
 
 /* Variasi Warna Latar Belakang Kotak */
 .box-white {
-    background-color: var(--pure-white);
+    background-color: var(--surface-primary);
 }
 
 .box-neon {
@@ -68,25 +68,26 @@
 }
 
 .box-black {
-    background-color: var(--dark-black);
+    background-color: var(--surface-elevated);
 }
 
 /* Komponen Teks di dalam Kotak */
 .box-tag {
     display: inline-block;
     align-self: flex-start;
-    background-color: var(--dark-black);
-    color: var(--pure-white);
+    background-color: var(--border-color);
+    color: var(--surface-primary);
     padding: 4px 10px;
     font-size: 0.75rem;
     font-weight: bold;
     margin-bottom: 20px;
-    border: 2px solid var(--dark-black);
+    border: 2px solid var(--border-color);
+    transition: transform 0.1s ease;
 }
 
 .box-tag.tag-neon {
     background-color: var(--neon-green);
-    color: var(--dark-black);
+    color: #000000;
 }
 
 .box-heading {
@@ -94,6 +95,7 @@
     line-height: 1.2;
     margin-bottom: 12px;
     text-transform: uppercase;
+    color: var(--text-primary);
 }
 
 .box-desc {
@@ -101,12 +103,12 @@
     font-weight: 500;
     font-size: 0.95rem;
     line-height: 1.65;
-    color: #1a1a1a;
+    color: var(--text-secondary);
 }
 
 /* Helper Class untuk Teks Spesifik di Kotak Hitam */
 .text-white {
-    color: var(--pure-white) !important;
+    color: var(--text-primary) !important;
 }
 
 /* Komponen Angka Statistik Besar */
@@ -129,7 +131,6 @@
     .bento-grid {
         grid-template-columns: 1fr;
         grid-template-areas: none;
-        /* Menonaktifkan template area agar susunan mengalir vertikal otomatis */
     }
 
     .bento-box {
@@ -148,10 +149,6 @@
 }
 
 /* [TAG: BENTO_TAG_ENHANCEMENT] Enhanced box tag with slight hover scale */
-.box-tag {
-    transition: transform 0.1s ease;
-}
-
 .bento-box:hover .box-tag {
     transform: translate(-2px, -2px);
 }

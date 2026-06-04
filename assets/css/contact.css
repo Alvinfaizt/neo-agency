@@ -25,6 +25,7 @@
     font-size: 2.5rem;
     line-height: 1.1;
     letter-spacing: -1px;
+    color: var(--text-primary);
 }
 
 .info-text {
@@ -32,25 +33,25 @@
     font-size: 1.05rem;
     font-weight: 500;
     line-height: 1.65;
-    color: #1a1a1a;
+    color: var(--text-secondary);
 }
 
 .info-badge {
     display: inline-block;
     align-self: flex-start;
-    background-color: var(--dark-black);
+    background-color: var(--border-color);
     color: var(--neon-green);
     padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: bold;
-    border: var(--neo-stroke);
+    border: 4px solid var(--border-color);
 }
 
 /* Sisi Kanan Formulir */
 .contact-box-form {
-    background-color: var(--pure-white);
-    border: var(--neo-stroke);
-    box-shadow: var(--neo-shadow);
+    background-color: var(--surface-primary);
+    border: 4px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--shadow-color);
     padding: 40px;
 }
 
@@ -66,19 +67,21 @@
     font-size: 0.9rem;
     font-weight: bold;
     letter-spacing: 0.5px;
+    color: var(--text-primary);
 }
 
 .form-input {
     width: 100%;
     padding: 14px;
     font-size: 1rem;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', 'Arial', sans-serif;
     font-weight: bold;
-    background-color: var(--pure-white);
-    border: var(--neo-stroke);
+    background-color: var(--surface-elevated);
+    color: var(--text-primary);
+    border: 4px solid var(--border-color);
     border-radius: 0px;
     outline: none;
-    box-shadow: 4px 4px 0px var(--dark-black);
+    box-shadow: 4px 4px 0px var(--shadow-color);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
@@ -89,9 +92,8 @@
 
 /* [TAG: CONTACT_FORM_FOCUS] Enhanced focus state with neon brand accent */
 .form-input:focus {
-    background-color: #F5FFF5;
     transform: translate(4px, 4px);
-    box-shadow: 0px 0px 0px var(--dark-black);
+    box-shadow: 0px 0px 0px var(--shadow-color);
     border-color: var(--neon-green);
 }
 
@@ -135,14 +137,14 @@
 .form-trust-signal {
     margin-top: 16px;
     padding: 10.5px 14px;
-    background-color: var(--pure-white);
-    border: 2px solid var(--dark-black);
+    background-color: var(--surface-primary);
+    border: 2px solid var(--border-color);
     font-family: 'Space Grotesk', 'Arial Black', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
-    color: var(--dark-black);
+    color: var(--text-primary);
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    box-shadow: 4px 4px 0px var(--dark-black);
+    box-shadow: 4px 4px 0px var(--shadow-color);
 }

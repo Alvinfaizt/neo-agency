@@ -32,9 +32,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" id="nav-logo" class="nav-logo">NEO_AGENCY</a>
-            <div class="nav-links">
-                <!-- [TAG: HTML_NAV_LINKS_UPDATE] Added data-target and scroll class for smooth navigation -->
-                <!-- [TAG: NAVBAR_HOME_BUTTON_HTML] Tombol Navigasi Home -->
+            <!-- [TAG: HAMBURGER_MENU] Mobile hamburger toggle -->
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="nav-links" class="nav-links">
                 <a href="#home" id="nav-home" class="nav-item">Home</a>
                 <a href="#about" class="nav-item nav-scroll-link" data-target="about">About</a>
                 <a href="#portfolio" class="nav-item nav-scroll-link" data-target="portfolio">Portfolio</a>
@@ -46,6 +50,8 @@
             </div>
         </div>
     </nav>
+    <!-- Mobile nav overlay -->
+    <div id="nav-overlay" class="nav-overlay"></div>
 
     <!-- [TAG: HERO_SECTION] Seksi utama Landing Page -->
     <header class="hero">
@@ -253,20 +259,10 @@
             <div id="portfolio-grid" class="portfolio-grid">
                 <!-- Proyek 1: Web Development -->
                 <div class="portfolio-card" data-category="web">
-                    <div class="project-img-box" style="background-color: var(--neon-green);">
-                        <!-- Neubrutalist Wireframe Widget -->
-                        <div class="pf-widget pf-altima">
-                            <div class="pf-altima-bar">
-                                <span class="pf-dot"></span>
-                                <span class="pf-dot"></span>
-                                <span class="pf-dot"></span>
-                            </div>
-                            <div class="pf-altima-body">
-                                <div class="pf-code-line short"></div>
-                                <div class="pf-code-line long"></div>
-                                <div class="pf-code-line medium"></div>
-                                <div class="pf-badge-speed">99%</div>
-                            </div>
+                    <div class="project-img-box" style="background-color: #00FF66;">
+                        <div class="pf-icon-widget">
+                            <div class="pf-emoji">⚡</div>
+                            <div class="pf-label" style="color: #000;">HEADLESS CMS</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -278,12 +274,10 @@
 
                 <!-- Proyek 2: Branding/Design -->
                 <div class="portfolio-card" data-category="design">
-                    <div class="project-img-box" style="background-color: var(--pure-white);">
-                        <!-- Typographic Branding Widget -->
-                        <div class="pf-widget pf-kaizen">
-                            <div class="pf-kaizen-text">改善</div>
-                            <div class="pf-kaizen-banner">KAIZEN</div>
-                            <div class="pf-star">✦</div>
+                    <div class="project-img-box" style="background-color: #FFFFFF;">
+                        <div class="pf-icon-widget">
+                            <div class="pf-emoji">✦</div>
+                            <div class="pf-label" style="color: #000;">BRAND IDENTITY</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -295,19 +289,10 @@
 
                 <!-- Proyek 3: Web Development -->
                 <div class="portfolio-card" data-category="web">
-                    <div class="project-img-box" style="background-color: var(--dark-black);">
-                        <!-- Dashboard Widget -->
-                        <div class="pf-widget pf-apex">
-                            <div class="pf-apex-metric">
-                                <div class="pf-metric-label">SYS_OK</div>
-                                <div class="pf-metric-value">2.4ms</div>
-                            </div>
-                            <div class="pf-apex-chart">
-                                <span class="pf-chart-bar" style="height: 40%"></span>
-                                <span class="pf-chart-bar" style="height: 75%"></span>
-                                <span class="pf-chart-bar" style="height: 55%"></span>
-                                <span class="pf-chart-bar" style="height: 90%"></span>
-                            </div>
+                    <div class="project-img-box" style="background-color: #111111;">
+                        <div class="pf-icon-widget" style="color: #FFFFFF;">
+                            <div class="pf-emoji">📊</div>
+                            <div class="pf-label" style="color: #00FF66;">DASHBOARD</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -440,8 +425,9 @@
                         <div class="form-group">
                             <label for="contact-message" class="form-label">YOUR MESSAGE</label>
                             <textarea id="contact-message" class="form-input form-textarea"
-                                placeholder="Tulis rencana proyek besar Anda di sini..." required></textarea>
+                                placeholder="Tulis rencana proyek besar Anda di sini..." required maxlength="500"></textarea>
                             <span id="error-message" class="error-message">Pesan tidak boleh kosong!</span>
+                            <div id="char-counter" class="char-counter">0 / 500</div>
                         </div>
 
                         <!-- Tombol Submit Kirim -->
@@ -491,6 +477,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- [TAG: BACK_TO_TOP] Tombol kembali ke atas -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
 
     <!-- [TAG: JAVASCRIPT_LINKS] Script modular menggunakan defer agar load berurutan -->
     <script src="assets/js/interaction.js" defer></script>

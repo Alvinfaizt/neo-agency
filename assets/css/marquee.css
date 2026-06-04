@@ -1,9 +1,9 @@
 /* [TAG: MARQUEE_COMPONENT] Infinite scrolling text strip - Signature neubrutalism element */
 
 .marquee-strip {
-    background-color: var(--dark-black);
-    border-top: var(--neo-stroke);
-    border-bottom: var(--neo-stroke);
+    background-color: #000000;
+    border-top: 4px solid var(--border-color);
+    border-bottom: 4px solid var(--border-color);
     padding: 16px 0;
     overflow: hidden;
     white-space: nowrap;
@@ -12,7 +12,7 @@
 
 /* [TAG: MARQUEE_VARIANT_NEON] Neon green background variant */
 .marquee-strip.marquee-neon {
-    background-color: var(--neon-green);
+    background-color: #00FF66;
 }
 
 /* [TAG: MARQUEE_ANIMATION] Scrolling content container */
@@ -26,13 +26,13 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--pure-white);
+    color: #FFFFFF;
     will-change: transform;
 }
 
 /* [TAG: MARQUEE_NEON_TEXT] Text color override for neon variant */
 .marquee-neon .marquee-content {
-    color: var(--dark-black);
+    color: #000000;
 }
 
 /* [TAG: MARQUEE_REVERSE] Reversed scroll direction variant */
@@ -42,13 +42,13 @@
 
 /* [TAG: MARQUEE_SEPARATOR] Diamond/star separator between text items */
 .marquee-separator {
-    color: var(--neon-green);
+    color: #00FF66;
     font-size: 0.7rem;
     flex-shrink: 0;
 }
 
 /* [TAG: MARQUEE_NEON_SEPARATOR] Separator override for neon variant */
 .marquee-neon .marquee-separator {
-    color: var(--dark-black);
+    color: #000000;
     opacity: 0.4;
 }
